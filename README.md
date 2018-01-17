@@ -14,9 +14,9 @@ If you are using ubuntu or any linux flavour then follow this procedure.
 > Make sure you have git installed in your system
 
 Run following commands in terminal
-`git clone https://github.com/kdpisda/djangoServerForAngularClient`
-`source env/bin/activate`
-`./manage.py runserver`
+> `git clone https://github.com/kdpisda/djangoServerForAngularClient`
+> `source env/bin/activate`
+> `./manage.py runserver`
 
 Now open your browser and visit `127.0.0.1:8000`
 
