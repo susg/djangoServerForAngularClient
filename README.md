@@ -2,7 +2,7 @@
 
 Server for [angular client](https://github.com/kdpisda/angularClientDjango)
 
-The aim of the project is to make an open source CMS made in [Django](https://www.djangoproject.com/) and [Angular](https://angular.io)
+The aim of the project is to make an open source CMS made in [Django](https://www.djangoproject.com/) and [Angular](https://angular.io). Basically it will use angular as front end and django as back end.
 
 ## Application Front end
 
@@ -29,3 +29,5 @@ Currently we are working on the architecture of the application. It will be uplo
 - [ ] Suggest more
 
 > Ping me at pisdak79@gmail.com for more.
+
+I will update the roadmap for the whole project soon. Stay tuned for more.
