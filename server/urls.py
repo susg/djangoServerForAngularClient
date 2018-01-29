@@ -21,3 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls')),
 ]
+
+admin.site.site_header = 'Admin Panel'
+admin.site.site_title = 'Admin Panel'
