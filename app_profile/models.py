@@ -4,7 +4,7 @@ from django.dispatch import receiver
 from django.db import models
 
 # Create your models here.
-class UserProfile(models.Model):
+class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	bio = models.TextField(max_length=500, blank=True)
 	location = models.CharField(max_length=30, blank=True)
@@ -17,9 +17,9 @@ class UserProfile(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 @receiver(post_save, sender=User)
-def create_user_profile(serder, instance, creatted, **kwargs):
+def create_user_profile(sender, instance, created, **kwargs):
 	if created:
-		UserProfile.objects.create(user=instance)
+		Profile.objects.create(user=instance)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
