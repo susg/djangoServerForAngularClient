@@ -9,7 +9,12 @@ class UserProfile(models.Model):
 	bio = models.TextField(max_length=500, blank=True)
 	location = models.CharField(max_length=30, blank=True)
 	birth_date = models.DateField(null=True, blank=True)
+	# social = JSONField(blank=True, null=True)
+	fcm_token = models.TextField(max_length=32, blank=True)
+	avatar = models.ImageField(upload_to='static/uploads/avatar/', null=True, blank=True)
 	contact_no = models.CharField(max_length=10, null=True, blank=True)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 @receiver(post_save, sender=User)
 def create_user_profile(serder, instance, creatted, **kwargs):
