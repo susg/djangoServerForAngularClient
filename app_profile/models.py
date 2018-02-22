@@ -24,3 +24,14 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
 	instance.profile.save()
+
+class Page(models.Model):
+	user = 	models.ForeignKey(Profile, on_delete=models.CASCADE)
+	title = models.TextField(max_length=500, blank=True)
+	publish_date = models.DateField()
+
+class Post(models.Model):
+	page = models.ForeignKey(Page, on_delete=models.CASCADE)
+	title = models.TextField(max_length=500, blank=True)
+	content = models.TextField(max_length=5000, blank=True)
+	publish_date = models.DateField() 	
